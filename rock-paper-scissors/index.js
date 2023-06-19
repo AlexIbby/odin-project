@@ -20,7 +20,7 @@ let scores = document.getElementById("scores")
 
 
 
-rockEl.addEventListener("dblclick", function(){
+rockEl.addEventListener("click", function(){
 
     computerSelection = getComputerChoice()
 
@@ -39,7 +39,7 @@ rockEl.addEventListener("dblclick", function(){
 
 });
 
-paperEl.addEventListener("dblclick", function(){
+paperEl.addEventListener("click", function(){
 
     computerSelection = getComputerChoice()
 
@@ -56,7 +56,7 @@ paperEl.addEventListener("dblclick", function(){
 });
 
 
-scissorsEl.addEventListener("dblclick", function(){
+scissorsEl.addEventListener("click", function(){
 
     computerSelection = getComputerChoice()
 
