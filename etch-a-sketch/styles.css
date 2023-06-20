@@ -1,0 +1,127 @@
+/*Font Imports*/
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@700&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(109.6deg, rgb(204, 228, 247) 11.2%, rgb(237, 246, 250) 100.2%);
+}
+
+
+/*Etch a Sketch Styling*/
+
+#container{
+    height: auto;
+    width: 65%;
+    max-width: 550px;
+    border: 20px solid rgb(201, 34, 34);
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius:15%;
+    border-top-right-radius: 15%;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+    overflow: auto;
+    background: rgb(201, 34, 34);
+}
+
+
+
+.top-etch{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+    font-family: 'Lobster', cursive;
+    color:gold;
+    background-color: rgb(201, 34, 34);
+}
+
+#grid-container{
+    background-color: rgb(204, 201, 201); 
+    min-height: 325px;
+    display: grid;
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+}
+
+.grid-item{
+    height: 100%;
+    width: 100%;
+}
+
+.controls{
+    padding-top: 2rem;
+    background-color: rgb(201, 34, 34);
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.button-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button{
+    background: gold;
+    border: black solid 2px;
+    height: 60px;
+    width: 60px;
+    padding: 6px;
+    border-radius: 50%;
+    font-size: .75rem;
+    transition: .25s;
+}
+
+button:hover{
+    background:rgb(246, 230, 137);
+}
+
+button:active{
+    background: rgb(249, 239, 185);
+}
+
+.second-row-container{
+
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    padding-top: 1rem;
+    gap:.5rem;
+
+}
+
+.second-row-btn{
+
+    background: gold;
+    border: black solid 2px;
+    height: 60px;
+    width: 60px;
+    padding: 6px;
+    border-radius: 50%;
+    font-size: .75rem;
+    transition: .25s;
+
+}
+
