@@ -1,0 +1,206 @@
+
+/* 
+****************************************
+                Font Imports 
+****************************************
+*/
+@import url('https://fonts.googleapis.com/css2?family=REM:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-color: #EEEEEE;
+}
+
+/* 
+****************************************
+                Heading
+****************************************
+*/
+
+h1{
+    font-family:'REM', sans-serif;
+    font-size: 3rem;
+    padding: 20px;
+    padding-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;
+    color:#364750; 
+}
+
+h2{
+    font-family:'REM', sans-serif;
+    font-size: 1.7rem;
+    color:#c04a23; 
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/*****************************************
+              Calculator
+*****************************************/
+
+.calculator-container{
+    margin: auto;
+    height: 60vh;
+    background-color: white;
+    width: 60%;
+    max-width: 600px;
+    border-radius: 15px;
+}
+
+/*****************************************
+            Calculator Screen
+*****************************************/
+
+.calculator-screen{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    width: 100%;
+    height: 20%;
+    background-color: #364750;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.calculator-screen p{
+    font-family: 'Roboto Mono', monospace;
+    color:#F8F8F8; 
+    font-size: 3.5rem;
+    text-align: right;
+    padding-right: 20px; 
+    padding-bottom: 10px;
+    font-weight: 900;
+}
+
+/*****************************************
+        Buttons and Button Container
+*****************************************/
+
+.button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #18212A;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-bottom: 20px;
+}
+
+.button-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    flex:1;
+    padding-top:5px;
+}
+
+.calc-button{
+    flex:1; 
+    height: 100%;
+    width: 100%;
+    background-color: #18212A;
+    font-family: 'Roboto Mono', monospace;
+    color:#F8F8F8; 
+    font-size: 2rem;
+    border: none;
+    transition: .2s ease-in-out;
+}
+
+.calc-button:hover{
+    color:#f4815a;
+}
+
+.calc-button:active{
+    background-color: #f8f8f8;
+}
+
+.operator-button{
+    flex:1;
+    height: 100%;
+    background-color: #18212A;
+    border: none;
+    
+}
+
+.operator-button p{
+    display: grid;
+    align-items: center;
+    justify-content: center; /* this will also horizontally center your text */
+    text-align: center;
+    background-color: #F8F8F8;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #18212A;
+    transition: .2s ease-in-out;
+}
+
+.operator-button p:hover{
+    background-color: #f4815a;
+}
+
+#zero-btn{
+    flex:2;
+    display:flex; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#equal-btn p{
+    background-color: #f4815a;
+    color:#F8F8F8; 
+}
+
+
+/*****************************************
+        Media Query 
+*****************************************/
+
+@media screen and (min-width: 100px) and (max-width: 550px) {
+
+
+
+    .calculator-container{
+        width: 80%;
+    }
+
+    h1{
+        font-size: 2.5rem;
+    }
+
+    .calculator-screen p{
+        font-size: 2.5rem;
+    }
+    
+    .calc-button{
+        font-size: 1.5rem;
+    }
+
+    .operator-button p{
+        font-size: 1.5rem;
+        height: 50px;
+        width: 50px;
+    }
+
+}
