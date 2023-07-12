@@ -1,0 +1,273 @@
+/*
+=================================
+| Font Imports and Root Styling |
+=================================
+*/
+
+
+/*Mono Courier Font*/
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap');
+
+/*Form Sans Font*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+*{
+    padding:0; 
+    margin:0; 
+    box-sizing: border-box;
+    --title-font:'Courier Prime', monospace;
+    --form-font:'Open Sans', sans-serif;
+}
+/*
+=================================
+|      Main Page Styling        |
+=================================
+*/
+
+.container{
+    height: 100vh;
+    width: 100;
+    display: flex;
+    flex-direction: row;
+}
+
+.title{
+    font-family: var(--title-font);
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: 3rem;
+    color: #15495c;
+    
+}
+
+/*
+=================================
+|              Left             |
+=================================
+*/
+
+.left {
+    min-width: max(400px, 40%);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #E18D6E;
+    padding: 10px;
+    
+}
+
+.image-container{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    min-width: 100%;
+}
+
+.hero-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.left p{
+
+    color:white;
+    font-family: var(--form-font);
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 0;
+    text-align: center;
+}
+
+/*
+=================================
+|              Right            |
+=================================
+*/
+
+.right {
+    min-width: max(500px, 60%);
+    height: 100%;
+    background-color: #185971;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:20px;
+}
+
+.sign-up-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+h2{
+    font-family: var(--form-font);
+    font-size: 3rem;
+    color: whitesmoke;
+    padding-bottom: 30px;
+    padding-left: 30px;
+}
+
+form{
+    color:whitesmoke;
+    text-transform: capitalize;
+    font-family:var(--form-font); 
+    margin-left: 0;
+    width: 100%;
+    max-width: 900px;
+ 
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+}
+
+.form-section{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 200px;
+    padding-bottom: 20px;
+}
+
+input.custom-input {
+    padding: 10px 15px;
+    border: 1px solid #dcdcdc;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input.custom-input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+
+input.custom-input::placeholder {
+    color: #aaa;
+}
+
+.submit-button{
+
+    background: #E18D6E;
+    padding: 10px 20px;
+    font: var(--form-font);
+    font-weight: 600;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+    transition: .5s ease-out;
+}
+
+.submit-button:hover{
+    background: #b06f57;
+}
+
+.submit-button:active{
+    background: #ffffff;
+}
+
+#button-section{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 1rem;
+    margin: auto;
+}
+
+#password-validate{
+    display: none;
+    margin: auto;
+    background:hwb(195 75% 24% / 0.5);
+    padding: 10px 20px;
+    
+}
+
+
+/*
+=================================
+|       Mobile Media Query      |
+=================================
+*/
+
+@media only screen and (max-width: 959px) {
+
+    .container{
+        
+        width: 100;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title{
+        text-align: center;
+        
+    }
+
+    img{
+        max-height: 250px;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        background-color: #E18D6E;
+        padding: 10px;
+        max-height: 50%;
+        width: 100%;
+        padding-bottom: 20px;
+        
+    }
+
+    .left p{
+        width: 80%;
+        margin: auto;
+        font-size: 1.5rem;
+        margin-top: -125px;
+    }
+
+    h2{
+        padding: 0;
+        padding-bottom: 15px;
+        text-align: center;
+        margin: auto;
+        
+    }
+
+    .form-section{
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .right{
+        min-width: 100%;
+        margin: auto;
+    }
+
+    
+}
