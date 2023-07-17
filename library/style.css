@@ -1,0 +1,334 @@
+/* 
+-------------------------------------
+            Default Styles
+-------------------------------------
+*/
+
+
+/*PlayFair Font*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+/*Roboto 500 weight*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+/*Oswald Sans Serif*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@500&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --header-font:'Oswald', sans-serif;
+    --off-black: #2E304F;
+    --off-white-background:white;
+    --light-grey-accent:#EEEEEE;
+    --dark-grey-accent: #A5ACB6;
+    --brand-blue:#0265FB;
+    --default-font:'Roboto', sans-serif;
+    --hover-accent:#FBFCFE;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Arial', sans-serif; 
+    background-color: var(--off-white-background);
+}
+
+
+/* 
+-------------------------------------
+    Container & Shared Left Rights
+-------------------------------------
+*/
+
+
+.container {
+    display: grid;
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    grid-template-columns: minmax(auto, 300px) 1fr;
+    height: 100%;
+    
+}
+
+.container > * {
+    border: 1px solid var(--light-grey-accent);
+}
+
+.left, .right {
+    padding: 1em; /* added for a bit of inner spacing, adjust as needed */
+}
+
+/* 
+-------------------------------------
+    Left
+-------------------------------------
+*/
+
+.left {
+    background-color: var(--off-white-background); 
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-container{
+    display: flex;
+    gap:1rem;
+    align-items: center;
+}
+
+.logo-text{
+    font-family: var(--header-font);
+    color:var(--off-black);
+    font-size: 1.4rem;
+}
+
+.logo-img{
+    width: 35px;
+}
+
+.menu-item-header{
+    font-family: var(--default-font);
+    font-size: 1.3rem;
+    font-weight: 300;
+    padding-left: 10px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    color:var(--dark-grey-accent)
+
+}
+
+.menu-item-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu-list{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    color:var(--off-black);
+    gap:1rem;
+    font-family: var(--default-font);
+    font-size: 1.2rem;
+    width: 100%;
+    border-bottom: 1px solid var(--light-grey-accent);
+    padding-bottom: 20px;
+
+}
+
+
+.menu-list svg{
+    width: 25px;
+}
+
+
+
+.menu-list a{
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Makes the link take the color of its parent element */
+    outline: none; /* Removes the outline when the link is focused */
+    cursor: pointer; /* Ensures the link is clickable */
+}
+
+
+
+.menu-list li{
+    display: flex;
+    gap: .7rem;
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 25px;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+
+.menu-list li:hover{
+    background-color: var(--hover-accent);
+    border-radius: 10px;
+    border: 1px solid var(--light-grey-accent);
+    color:var(--brand-blue)
+}
+
+
+.menu-list li:hover svg path{
+    fill:var(--brand-blue);
+}
+
+
+/* 
+-------------------------------------
+    Right
+-------------------------------------
+*/
+
+.right {
+    background-color:var(--off-white-background);
+
+}
+
+.header-books{
+    width: 100%;
+    height: auto;
+    font-family: var(--default-font);
+    border-bottom:1px solid var(--light-grey-accent);
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+   
+}
+
+.header-books-left{
+    display: flex;
+    flex:1;
+    gap:.5rem;
+}
+
+.header-books h2{
+    font-size: 2.5rem;
+    margin-right: 40px;
+}
+
+.header-books img{
+    width: 45px;
+    height: 45px;
+    border: 2px solid var(--light-grey-accent);
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.header-books img:hover{
+    background-color: var(--light-grey-accent);
+}
+
+.header-books-right{
+    display:flex;
+    gap:1rem;
+    padding-right: 20px;
+}
+
+#profile-pic{
+    padding:0;
+}
+
+.profile-overview{
+    display: flex;
+    flex-direction: column;
+    gap:.3rem;
+}
+
+.join-date{
+    color:var(--dark-grey-accent);
+    font-size: .9rem;
+}
+
+.subscription-type{
+    background-color: #FFA827;
+    color:white;
+    width: fit-content;
+    font-size: .9rem;
+    padding: 3px 5px;
+    border-radius: 5px;
+
+}
+
+/* 
+-------------------------------------
+    Right - Books Area
+-------------------------------------
+*/
+
+.books-area-container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+}
+
+#plus-sign{
+    font-size: 2rem;
+}
+
+#add-book-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 15px;
+    width: fit-content;
+    gap:1rem;
+    font-family: var(--default-font);
+    font-size: 1.5rem;
+    border: 1px solid var(--dark-grey-accent);
+    background-color: #FBFCFE;
+    border-radius: 10px;
+    transition: .2s ease-in;
+    margin-bottom: 20px;
+}
+
+#add-book-btn:hover{
+
+    background-color: var(--hover-accent);
+    color: var(--brand-blue);
+}
+
+#add-book-btn:active{
+    background-color: white;
+    color: white;
+}
+
+/* 
+-------------------------------------
+    Add Book Form
+-------------------------------------
+*/
+
+.add-book-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    padding: 20px;
+    font-family: var(--default-font);
+    font-size: 1.2rem;
+    background-color: var(--hover-accent);
+    border: 1px solid var(--dark-grey-accent);
+    border-radius: 10px;
+    transition: .3s ease;
+}
+
+.input-book{
+    width: 60%;
+    border: 1px solid var(--dark-grey-accent);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#submit{
+    padding: 10px 20px;
+    width: fit-content;
+    background-color: var(--hover-accent);
+    border: 3px solid var(--brand-blue);
+    border-radius: 5px;
+    color: black;
+    font-size: 1.2rem;  
+    font-weight: 700;
+}
+
+#submit:hover{
+    background-color: white;
+}
+
+#submit:active{
+    background-color: rgb(253, 213, 138);
+}
