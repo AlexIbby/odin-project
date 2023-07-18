@@ -89,7 +89,7 @@
 
         <div class="header-books">
             <div class="header-books-left">
-                <h2>My Books</h2>
+                <h2>Books</h2>
                 <img src="/images/magnifying.svg" alt="Search">
                 <img src="/images/refresh.svg" alt="Refresh button">
             </div>
@@ -99,8 +99,8 @@
                 <img id="profile-pic" src="/images/profile picture.jpg" alt="profile">
 
                 <div class="profile-overview">
-                        <h4>Sabrina Mayer</h4>
-                        <p class="join-date">Joined 2023</p>
+                        <h4>Jane Doe</h4>
+                        <p class="join-date">Joined Aug 2023</p>
                         <p class="subscription-type">Premium</p>
 
                 </div>
@@ -109,37 +109,62 @@
         </div>
 
         <div class="books-area-container">
-            <button id="add-book-btn"> 
-                <span id="plus-sign">+</span>Add Book
-            </button>
+                <button id="add-book-btn"> 
+                    <span id="plus-sign">+</span>Add a Book
+                </button>
 
-        <div class="add-book-container">
+            <div class="add-book-container hide-form">
 
-            <form action="add-book" class="add-book-form">
+                <form action="new-book-form" class="add-book-form">
 
-                <!--Book Title-->
-                <label for="book-title">Book Title:</label>
-                <input class="input-book" type="text" id="book-title" name="book-title" required>
+                    <!--Book Title-->
+                    <label for="book-title">Book Title:</label>
+                    <input class="input-book" type="text" id="book-title" name="book-title" required>
 
-                <!--Author-->
-                <label for="author">Author (Optional):</label>
-                <input class="input-book" type="text" id="author" name="author">
-                
-                <!--Pages-->
-                <label for="pages">No. Of Pages (Optional):</label>
-                <input class="input-book" type="number" id="pages" name="pages">
+                    <!--Author-->
+                    <label for="author">Author (Optional):</label>
+                    <input class="input-book" type="text" id="author" name="author">
+                    
+                    <!--Pages-->
+                    <label for="pages">No. Of Pages (Optional):</label>
+                    <input class="input-book" type="number" id="pages" name="pages">
 
-                <!--Read?-->
-                <label for="read">Have You Read the Book?:</label>
-                <input class="input-book" type="read" id="read" name="read" required>               
+                    <!-- Read? -->
+                    <label for="read">Have You Read the Book?:</label>
+                    <select id="read" name="read" required>
+                        <option value="">Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>         
 
-                <!--Submit Button-->
-                <input type="submit" value="Submit" id="submit">
+                    <!--Submit Button-->
+                    <input type="submit" value="Submit" id="submit">
 
 
-            </form>
+                </form>
 
-        </div>
+            </div>
+
+            <div class="library-header">
+                <h2>My Library</h2>
+            </div>
+
+            <div class="library">
+
+                <div class="book-card">
+
+                    <img class="book-cover-card" src="/images/books/_1400x2133..jpg" alt="Great Gatsby Cover">
+
+                    <p id="title-card">The Great Gatsby</p>
+                    <p class="author-card">F. Scott Fitgerald</p>
+                    <p class="number-card">339 Pages</p>
+                    <p>Read Yet?: </p>
+
+
+
+                </div>
+
+            </div>
 
 
         </div>
