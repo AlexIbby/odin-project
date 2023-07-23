@@ -78,6 +78,7 @@ html, body {
     display: flex;
     gap:1rem;
     align-items: center;
+    
 }
 
 .logo-text{
@@ -695,4 +696,122 @@ h2{
     gap: .5rem;
     align-items: center;
     justify-content: left;
+}
+
+/*Hamburger*/
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.line {
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+}
+
+
+
+/*Media Queries*/
+
+@media (max-width: 520px) { 
+    .container {
+        grid-template-columns: 1fr; /* Collapse to single column */
+        min-height: 250vh;
+        
+        
+    }
+
+    .left {
+        background-color: var(--off-white-background);
+        display: flex;
+        flex-direction: column;
+        position: -webkit-sticky; /* For Safari */
+        position: sticky;
+        top: 0;
+        z-index: 10; /* make sure it's above other content */
+    }
+
+    .logo-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 5px;
+        width: 100%;
+        background: white;
+
+    }
+
+    .menu-item-container{
+        display: none;
+    }
+
+    .header-books-right{
+        display: none;
+    }
+
+    .menu-item-header{
+        display: none;
+    }
+    .menu-list{
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .left{
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .right{
+        border-top: white;
+    }
+
+    .header-books{
+        flex-direction: column-reverse;
+       
+    }
+
+    .header-books{
+        border-bottom: none;
+    }
+
+    .menu-list ul{
+        padding-bottom: 0;
+    }
+
+    .header-books-right{
+        border-bottom: 1px solid var(--light-grey-accent);
+        padding-bottom: 20px;
+    }
+
+    .header-books-left{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+
+    .books-area-container{
+        border-top: none;
+    }
+
+    .library-buttons-container{
+        justify-content: center;
+    }
+
+    .library-header{
+        text-align: center;
+    }
 }

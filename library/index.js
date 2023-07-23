@@ -5,7 +5,7 @@ if (!localStorage.getItem('books')) {
 }
 
 console.log(localStorage.getItem('books'))
-
+updateContainerHeight();
 
 /*********************************************
  *            Delcaring Variables            *
@@ -23,6 +23,8 @@ const sortTitleBtn = document.getElementById("sort-title")
 const sortAuthorBtn = document.getElementById("sort-author")
 const sortPagesBtn = document.getElementById("sort-pages")
 const deleteBtns = document.getElementsByClassName("delete-btn");
+const hamburgerMenuBtn = document.getElementById("hamburger-click")
+
 
 
 /*********************************************
@@ -33,6 +35,7 @@ addBookBtn.addEventListener("click", addBook);
 sortTitleBtn.addEventListener("click", sortTitle )
 sortAuthorBtn.addEventListener("click", sortAuthor)
 sortPagesBtn.addEventListener("click", sortPages)
+hamburgerMenuBtn.addEventListener("click", hamburgerOpenClose)
 
 
 /*********************************************
@@ -53,6 +56,8 @@ function addBook(){
     
 }
 
+
+/*Dynamically resize for mobile*/
 
 /*Processing the Form and adding the book*/
 
@@ -454,6 +459,87 @@ document.getElementById("submit-edit").addEventListener("click", function() {
 });
 
 
+function hamburgerOpenClose(){
 
-// Call the function on page load
+    
+    const menuItems = document.querySelector(".menu-item-container")
+    const userProfileInfo = document.querySelector(".header-books-right")
+    
+    if (menuItems.style.display === "none" || menuItems.style.display === "") {
+        // If menuItems is not displayed, show it
+        menuItems.style.display = "block";
+    } else {
+        // If menuItems is displayed, hide it
+        menuItems.style.display = "none";
+    }
+
+    if (userProfileInfo.style.display === "none" || userProfileInfo.style.display === "") {
+        // If userProfileInfo is not displayed, show it
+        userProfileInfo.style.display = "flex";
+  
+    } else {
+        // If userProfileInfo is displayed, hide it
+        userProfileInfo.style.display = "none";
+
+    }
+
+}
+
+window.addEventListener('resize', function() {
+    const menuItems = document.querySelector(".menu-item-container");
+    const userProfileInfo = document.querySelector(".header-books-right");
+    
+    // Check the screen width
+    if (window.innerWidth > 521) {
+        // For screens wider than 521px, always display the elements
+        menuItems.style.display = "block";
+        userProfileInfo.style.display = "flex";
+    }
+
+    if (window.innerWidth < 521) {
+        // For screens wider than 521px, always display the elements
+        menuItems.style.display = "none";
+        userProfileInfo.style.display = "none";
+    }
+});
+
+function hamburgerOpenClose(){
+    
+    const menuItems = document.querySelector(".menu-item-container");
+    const userProfileInfo = document.querySelector(".header-books-right");
+    
+    if (menuItems.style.display === "none" || menuItems.style.display === "") {
+        // If menuItems is not displayed, show it
+        menuItems.style.display = "block";
+    } else {
+        // If menuItems is displayed, hide it
+        menuItems.style.display = "none";
+    }
+
+    if (userProfileInfo.style.display === "none" || userProfileInfo.style.display === "") {
+        // If userProfileInfo is not displayed, show it
+        userProfileInfo.style.display = "flex";
+    } else {
+        // If userProfileInfo is displayed, hide it
+        userProfileInfo.style.display = "none";
+    }
+}
+
+/*Function to Resize for Sticky Positioning*/
+function updateContainerHeight() {
+    const container = document.querySelector('.container');
+    
+    // Check if screen width is under 520px
+    if (window.innerWidth <= 520) {
+        const bodyHeight = document.body.scrollHeight;
+        container.style.minHeight = `${bodyHeight + 5}px`;
+    } else {
+        container.style.minHeight = ''; // Reset to default value when screen is wider than 520px
+    }
+}
+
+
+
+// Call the functions needed on page load
 window.addEventListener('DOMContentLoaded', addBookCards);
+window.addEventListener('resize', updateContainerHeight);
