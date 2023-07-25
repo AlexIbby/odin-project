@@ -146,14 +146,22 @@ h2{
     justify-content: center; /* this will also horizontally center your text */
     text-align: center;
     background-color: #F8F8F8;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: bold;
     color: #18212A;
     transition: .2s ease-in-out;
+    margin: 0;
+    padding: 0;
 }
+
+#multiply{
+    line-height: 80px;
+}
+
+
 
 .operator-button p:hover{
     background-color: #f4815a;
@@ -186,12 +194,20 @@ h2{
     }
 
     h1{
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+        padding-top: 5px;
+    }
+
+    h2{
+        font-size: 1.4rem;
     }
 
     .calculator-screen p{
         font-size: 2.5rem;
         padding-right: 2.5rem;
+    
     }
     
     .calc-button{
@@ -200,8 +216,12 @@ h2{
 
     .operator-button p{
         font-size: 1.5rem;
-        height: 50px;
-        width: 50px;
+        height: 45px;
+        width: 45px;
+    }
+
+    #multiply{
+        line-height: 60px;
     }
 
 }
