@@ -1,0 +1,221 @@
+/******************************************
+*             Font Import                *
+******************************************/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+/*DM Serif*/ /*'DM Serif Display', serif;*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+/*Poppins*/ /*'Poppins', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+/******************************************
+*             Root and Body               *
+******************************************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --board-font: 'Poppins', sans-serif;
+    --game-status: 'DM Serif Display', serif;
+}
+
+body{
+ height: 100vh;
+ display: flex;
+ flex-direction: column;
+ background-color: rgb(253, 224, 178);
+
+}
+
+/******************************************
+*              Container                  *
+******************************************/
+.container{
+    width: 55vh;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
+
+#home-link{
+    width: fit-content;
+    padding: 7px 15px;
+    font-family: monospace;
+    font-size: 1.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #F0F0F0;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+#home-link:hover {
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.12);
+    transform: translateY(1px) translateX(1px);
+}
+
+#home-link:active {
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+    transform: translateY(2px) translateX(2px);
+}
+
+
+
+#top-header{
+        font-family: var(--game-status);
+        font-size: 4.5rem;
+        width: 100%;
+        color: rgb(81, 133, 135);
+        text-align: center;
+        padding-top: 20px;
+}
+
+#ai-label{
+    font-family: monospace;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.toggles-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap:2rem;
+}
+
+#aiToggle{
+    width: 25px;
+    height: 25px;
+    margin: 0;
+}
+
+#audio-btn{
+    height: 25px;
+}
+
+#second-header{
+    font-family: var(--game-status);
+    font-size: 2.5rem;
+    width: 100%;
+    color: rgb(132, 99, 224);
+    text-align: center;
+}
+
+#reset{
+    width: fit-content;
+    padding: 7px 15px;
+    font-family: monospace;
+    font-size: 1.6rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border: none;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    font-weight: bold;
+    
+}
+
+#reset:hover {
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.12);
+    transform: translateY(1px) translateX(1px);
+}
+
+#reset:active {
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+    transform: translateY(2px) translateX(2px);
+}
+
+
+
+.square{
+
+    border: 4px solid black;
+    border-bottom: 8px solid black;
+    border-top: none;
+    font-family: var(--board-font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7rem;
+}
+
+.square-text{
+    opacity: 0;  /* starts as invisible */
+    transition: opacity 0.5s ease-in-out;  /* transition effect */
+
+}
+
+.square-text.visible{
+    opacity: 1;  /* fully visible when class 'visible' is added */
+}
+
+
+/*Removing Borders from Grid*/
+.square:nth-child(3n+1){
+    border-left:none; 
+    
+}
+
+.square:nth-child(3n+3){
+    border-right:none; 
+}
+
+.square:nth-child(3n+3){
+    border-right:none; 
+}
+
+.square:nth-child(7n),
+.square:nth-child(8n),
+.square:nth-child(9n){
+    border-bottom: none;
+}
+
+
+@media (max-width: 520px) {
+    .container{
+        width: 90%;
+        height: 60%;
+    }
+
+    #top-header{
+        font-size: 4rem;
+    }
+
+    #second-header{
+        font-size: 2.2rem;
+    }
+
+    .square{
+        font-size: 7rem;
+    }
+
+    #ai-label{
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: row;
+        gap: .5rem;
+    }
+
+    
+
+    #gameStatus{
+        font-size: 3rem;
+        border-bottom: 3px solid rgb(81, 133, 135);
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+
+    }
+    
+}
