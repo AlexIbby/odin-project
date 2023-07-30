@@ -815,3 +815,11 @@ h2{
         text-align: center;
     }
 }
+
+@media (min-width: 520px){
+
+    .hamburger{
+        display: none;
+    }
+
+}
